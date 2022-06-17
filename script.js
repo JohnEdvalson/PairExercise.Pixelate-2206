@@ -8,13 +8,10 @@ function makeRow() {
   }
   table.appendChild(row);
 }
-
-color = "red";
-
 const addRow = document.getElementById("add-row");
 addRow.addEventListener("click", makeRow);
 
-const select = document.getElementById("options");
+color = "red";
 
 function colorize(event) {
   const target = event.target;
@@ -29,4 +26,6 @@ function selectColor(event) {
 }
 
 table.addEventListener("click", colorize);
+
+const select = document.getElementById("options");
 select.addEventListener("change", selectColor);
